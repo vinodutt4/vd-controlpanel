@@ -51,6 +51,25 @@
 .form-right i {
     font-size: 100px;
 }
+.btn-login {
+    border: 1px solid;
+    width: 100%;
+    background: #009;
+    color: #fff;
+    margin-bottom: 15px;
+}
+.btn-login:hover{
+border: 1px solid #000;
+}
+.divider:after, .divider:before {
+    content: "";
+    flex: 1;
+    height: 1px;
+    background: #eee;
+}
+.control_panel {
+    border-right: 1px solid #00009917;
+}
 </style>
 </head>
 
@@ -60,16 +79,19 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-10 offset-lg-1">
-                  <h3 class="mb-3">Login Now</h3>
                     <div class="bg-white shadow rounded">
                         <div class="row">
 
-                            <div class="col-md-5 ps-0 d-none d-md-block">
+                            <div class="col-md-5 ps-0 d-none d-md-block control_panel">
                                 <div class="d-flex justify-content-center py-4">
                                     <a href="index.html" class="logo d-flex align-items-center w-auto">
                                       <img src="assets/img/logo.png" alt="">
                                      
                                     </a>
+                                  </div>
+                                  <div class="panel_image">
+                                    <img src="assets/img/draw2.png" class="img-fluid">
+
                                   </div>
                             </div>
 
@@ -105,15 +127,28 @@
                                             </div>
 
                                             <div class="col-12">
-                                                <button type="submit" class="btn btn-primary px-4 float-end mt-4">login</button>
+                                                <button type="submit" class="btn btn-login px-4 mt-4">login</button>
                                             </div>
                                     </form>
-                                </div>
+                                    <div class="divider d-flex align-items-center my-4">
+                                        <p class="text-center fw-bold mx-3 mb-0">Or</p>
+                                    </div>       
+                            <div class="text-center">
+                                <button type="button" class="btn btn-primary btn-floating mx-1">
+                                  <i class="fab fa-facebook-f"></i>
+                                </button>
+                    
+                                <button type="button" class="btn btn-primary btn-floating mx-1">
+                                  <i class="fab fa-google"></i>
+                                </button>
+                    
+                              </div>
+
                             </div>
-                            
+                        </div>
                         </div>
                     </div>
-                    <p class="text-end text-secondary mt-3">Bootstrap 5 Login Page Design</p>
+
                 </div>
             </div>
         </div>
