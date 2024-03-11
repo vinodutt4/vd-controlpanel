@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>Pages / Login - NiceAdmin Bootstrap Template</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+
+  <!-- Favicons -->
+  <link href="assets/img/favicon.png" rel="icon">
+  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+   <!-- bootstrap -->
+   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css">
+  <!-- Google Fonts -->
+  <link href="https://fonts.gstatic.com" rel="preconnect">
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Nunito:300,300i,400,400i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"/>
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+  <link href="assets/vendor/quill/quill.snow.css" rel="stylesheet">
+  <link href="assets/vendor/quill/quill.bubble.css" rel="stylesheet">
+  <link href="assets/vendor/remixicon/remixicon.css" rel="stylesheet">
+  <link href="assets/vendor/simple-datatables/style.css" rel="stylesheet">
+
+  <!-- Template Main CSS File -->
+  <link href="assets/css/style.css" rel="stylesheet">
+
+  <!-- =======================================================
+  * Template Name: NiceAdmin
+  * Updated: Jan 29 2024 with Bootstrap v5.3.2
+  * Template URL: https://bootstrapmade.com/nice-admin-bootstrap-admin-html-template/
+  * Author: BootstrapMade.com
+  * License: https://bootstrapmade.com/license/
+  ======================================================== -->
+ <style>
+body {
+    overflow: hidden;
+}
+.contain_form {
+    background: #fff;
+    box-shadow: 5px 3px 7px rgba(0, 0, 5, .2), 0 10px 10px rgba(0, 0, 0, .2);
+    position: relative;
+    width: 850px;
+    max-width: 100%;
+    min-height: 480px;
+    margin: 20px auto;
+    transition: 333ms;
+}
+.form-container form {
+    background: #fff;
+    display: flex;
+    flex-direction: column;
+    padding:  0 50px;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+.social-container {
+    margin: 20px 0;
+    display: block;
+}
+.social-container a {
+    border: 1px solid #008ecf;
+    border-radius: 50%;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 5px;
+    height: 40px;
+    width: 40px;
+    transition: 333ms;
+}
+.social-container a:hover {
+    transform: rotateZ(13deg);
+    border: 1px solid #0e263d;
+}
+.form-container input {
+    background: #eee;
+    border: none;
+    border-radius: 50px;
+    padding: 12px 29px;
+    margin: 8px 0;
+    width: 280px;
+    max-width: 100%;
+}
+.form-container input:hover {
+    transform: scale(101%);
+}
+button {
+    border-radius: 50px;
+    box-shadow: 0 1px 1px;
+    background: #012970;
+    color: #fff;
+    font-size: 12px;
+    font-weight: bold;
+    padding: 12px 45px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    transition: transform 80ms ease-in;
+    border: 1px solid #fff;
+}
+button:active {
+    transform: scale(.95);
+}
+button:focus {
+    outline: none;
+}
+button.ghost {
+    background: transparent;
+    border-color: #fff;
+}
+.form-container {
+    position: absolute;
+    top: 0;
+    height: 100%;
+    transition: all .6s ease-in-out;
+}
+.sign-in-container {
+    left: 0;
+    width: 50%;
+    z-index: 2;
+}
+.sign-up-container {
+    left: 0;
+    width: 50%;
+    z-index: 1;
+    opacity: 0;
+}
+.overlay-container {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: 50%;
+    height: 100%;
+    overflow: hidden;
+    transition: transform .6s ease-in-out;
+    z-index: 100;
+}
+.overlay {
+    background: linear-gradient(to right, #012970, #012970) no-repeat 0 0 / cover;
+    color: #fff;
+    position: relative;
+    left: -100%;
+    height: 100%;
+    width: 200%;
+    transform: translateY(0);
+    transition: transform .6s ease-in-out;
+}
+.overlay-panel {
+    position: absolute;
+    top: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 0 40px;
+    height: 100%;
+    width: 50%;
+    text-align: center;
+    transform: translateY(0);
+    transition: transform .6s ease-in-out;
+}
+.overlay-right {
+    right: 0;
+    transform: translateY(0);
+}
+.overlay-left {
+    transform: translateY(-20%);
+}
+/* Move overlay to left */
+.contain_form.right-panel-active .overlay-container {
+    transform: translateX(-100%);
+}
+/* Bring signup over signin */
+.contain_form.right-panel-active .sign-up-container {
+    transform: translateX(100%);
+    opacity: 1;
+    z-index: 5;
+}
+/* Move overlay back to right */
+.contain_form.right-panel-active .overlay {
+    transform: translateX(50%);
+}
+/* Bring back the text to center */
+.contain_form.right-panel-active .overlay-left {
+    transform: translateY(0);
+}
+/* Same effect for right */
+.contain_form.right-panel-active .overlay-right {
+    transform: translateY(20%);
+}
+.divider:after, .divider:before {
+    content: "";
+    flex: 1;
+    height: 1px;
+    background: #eee;
+}
+a.logo {
+    background: #fff;
+    padding: 5px 40px;
+}
+ </style>
+</head>
+<body>
+
+    <section>
+        <div class="contain_form" id="contain_form">
+            <div class="form-container sign-up-container">
+                <form action="#">
+                    <h1 class="fs-4 fw-bold">Sign Up</h1>
+                    <div class="btn_size text-center">
+                        <button class="btn btn-lg btn-block text-white w-100 my-3" style="background-color: #dd4b39; font-size:14px;" type="submit">
+                          <i class="fab fa-google me-2"></i> Sign in with google </button>
+                        <button class="btn btn-lg btn-block text-white w-100 mb-2" style="background-color: #3b5998; font-size:14px;" type="submit">
+                          <i class="fab fa-facebook-f me-2"></i>Sign in with facebook </button>
+                      </div>
+                    <span class="fs-5 fw-bold">Or</span>
+                    <label>
+                        <input type="text" placeholder="Name"/>
+                    </label>
+                    <label>
+                        <input type="email" placeholder="Email"/>
+                    </label>
+                    <label>
+                        <input type="password" placeholder="Password"/>
+                    </label>
+                    <button style="margin-top: 9px">Sign Up</button>
+                </form>
+            </div>
+            <div class="form-container sign-in-container">
+                <form action="#">
+                    <h1 class="fs-4 fw-bold">Sign in</h1>
+                    <div class="btn_size text-center">
+                        <button class="btn btn-lg btn-block text-white w-100 my-3" style="background-color: #dd4b39; font-size:14px;" type="submit">
+                          <i class="fab fa-google me-2"></i> Sign in with google </button>
+                        <button class="btn btn-lg btn-block text-white w-100 mb-2" style="background-color: #3b5998; font-size:14px;" type="submit">
+                          <i class="fab fa-facebook-f me-2"></i>Sign in with facebook </button>
+                      </div>
+                      <div class="divider d-flex align-items-center my-4">
+                        <p class="text-center fw-bold mx-3 mb-0">Or</p>
+                    </div>  
+                    <label>
+                        <input type="email" placeholder="Email"/>
+                    </label>
+                    <label>
+                        <input type="password" placeholder="Password"/>
+                    </label>
+                    <a class="fs-10 my-2" href="#">Forgot your password?</a>
+                    <button>Sign In</button>
+                </form>
+            </div>
+            <div class="overlay-container">
+                <div class="overlay">
+                    <div class="overlay-panel overlay-left">
+                        <div class="d-flex justify-content-center py-4">
+                            <a href="index.html" class="logo d-flex align-items-center w-auto">
+                              <img src="assets/img/logo.png" alt="">
+                             
+                            </a>
+                          </div>
+                        <h1 class="fs-3">Log in</h1>
+                        <p>Sign in here if you already have an account </p>
+                        <button class="ghost mt-5" id="signIn">Sign In</button>
+                    </div>
+                    <div class="overlay-panel overlay-right">
+                        <div class="d-flex justify-content-center py-4">
+                            <a href="index.html" class="logo d-flex align-items-center w-auto">
+                              <img src="assets/img/logo.png" alt="">
+                             
+                            </a>
+                          </div>
+                        <h1>Create, Account!</h1>
+                        <p>Sign up if you still don't have an account ... </p>
+                        <button class="ghost" id="signUp">Sign Up</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+ <!-- bootstrap js file -->
+ <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+
+  <!-- Vendor JS Files -->
+  <script src="assets/vendor/apexcharts/apexcharts.min.js"></script>
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/chart.js/chart.umd.js"></script>
+  <script src="assets/vendor/echarts/echarts.min.js"></script>
+  <script src="assets/vendor/quill/quill.min.js"></script>
+  <script src="assets/vendor/simple-datatables/simple-datatables.js"></script>
+  <script src="assets/vendor/tinymce/tinymce.min.js"></script>
+  <script src="assets/vendor/php-email-form/validate.js"></script>
+
+  <!-- Template Main JS File -->
+  <script src="assets/js/main.js"></script>
+
+  <script>
+    const signUpButton = document.getElementById('signUp');
+const signInButton = document.getElementById('signIn');
+const contain_form = document.getElementById('contain_form');
+
+signUpButton.addEventListener('click', () =>
+contain_form.classList.add('right-panel-active'));
+
+signInButton.addEventListener('click', () =>
+contain_form.classList.remove('right-panel-active'));
+
+  </script>
+
+</body>
+
+</html>
