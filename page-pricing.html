@@ -1,0 +1,977 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <title>Dashboard - NiceAdmin Bootstrap Template</title>
+    <meta content="" name="description">
+    <meta content="" name="keywords">
+    <!-- Favicons -->
+    <link href="assets/img/favicon.png" rel="icon">
+    <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+    <!-- Google Fonts -->
+    <link href="https://fonts.gstatic.com" rel="preconnect">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Nunito:300,300i,400,400i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+    <!-- bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css">
+    <!-- Vendor CSS Files -->
+    <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+    <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+    <link href="assets/vendor/quill/quill.snow.css" rel="stylesheet">
+    <link href="assets/vendor/quill/quill.bubble.css" rel="stylesheet">
+    <link href="assets/vendor/remixicon/remixicon.css" rel="stylesheet">
+    <link href="assets/vendor/simple-datatables/style.css" rel="stylesheet">
+    <!-- Template Main CSS File -->
+    <link href="assets/css/style.css" rel="stylesheet">
+    <!-- =======================================================
+  * Template Name: NiceAdmin
+  * Updated: Jan 29 2024 with Bootstrap v5.3.2
+  * Template URL: https://bootstrapmade.com/nice-admin-bootstrap-admin-html-template/
+  * Author: BootstrapMade.com
+  * License: https://bootstrapmade.com/license/
+  ======================================================== -->
+
+ <style>
+    li.nav-item {
+    font-size: 14px;
+}
+ </style>
+
+  </head>
+  <body>
+    <!-- ======= Header ======= -->
+    <header id="header" class="header fixed-top d-flex align-items-center">
+      <div class="d-flex align-items-center justify-content-between">
+        <a href="index.html" class="logo d-flex align-items-center">
+          <img src="assets/img/logo.png" alt="">
+        </a>
+        <i class="bi bi-list toggle-sidebar-btn"></i>
+      </div>
+      <!-- End Logo -->
+      <div class="search-bar">
+        <form class="search-form d-flex align-items-center" method="POST" action="#">
+          <input type="text" name="query" placeholder="Search" title="Enter search keyword">
+          <button type="submit" title="Search">
+            <i class="bi bi-search"></i>
+          </button>
+        </form>
+      </div>
+      <!-- End Search Bar -->
+      <nav class="header-nav ms-auto">
+        <ul class="d-flex align-items-center">
+          <li class="nav-item d-block d-lg-none">
+            <a class="nav-link nav-icon search-bar-toggle " href="#">
+              <i class="bi bi-search"></i>
+            </a>
+          </li>
+          <!-- End Search Icon-->
+          <li class="nav-item dropdown">
+            <a class="nav-link nav-icon" href="#" data-bs-toggle="dropdown">
+              <i class="bi bi-bell"></i>
+              <span class="badge bg-primary badge-number">4</span>
+            </a>
+            <!-- End Notification Icon -->
+            <ul class="dropdown-menu dropdown-menu-end dropdown-menu-arrow notifications">
+              <li class="dropdown-header"> You have 4 new notifications <a href="#">
+                  <span class="badge rounded-pill bg-primary p-2 ms-2">View all</span>
+                </a>
+              </li>
+              <li>
+                <hr class="dropdown-divider">
+              </li>
+              <li class="notification-item">
+                <i class="bi bi-exclamation-circle text-warning"></i>
+                <div>
+                  <h4>Lorem Ipsum</h4>
+                  <p>Quae dolorem earum veritatis oditseno</p>
+                  <p>30 min. ago</p>
+                </div>
+              </li>
+              <li>
+                <hr class="dropdown-divider">
+              </li>
+              <li class="notification-item">
+                <i class="bi bi-x-circle text-danger"></i>
+                <div>
+                  <h4>Atque rerum nesciunt</h4>
+                  <p>Quae dolorem earum veritatis oditseno</p>
+                  <p>1 hr. ago</p>
+                </div>
+              </li>
+              <li>
+                <hr class="dropdown-divider">
+              </li>
+              <li class="notification-item">
+                <i class="bi bi-check-circle text-success"></i>
+                <div>
+                  <h4>Sit rerum fuga</h4>
+                  <p>Quae dolorem earum veritatis oditseno</p>
+                  <p>2 hrs. ago</p>
+                </div>
+              </li>
+              <li>
+                <hr class="dropdown-divider">
+              </li>
+              <li class="notification-item">
+                <i class="bi bi-info-circle text-primary"></i>
+                <div>
+                  <h4>Dicta reprehenderit</h4>
+                  <p>Quae dolorem earum veritatis oditseno</p>
+                  <p>4 hrs. ago</p>
+                </div>
+              </li>
+              <li>
+                <hr class="dropdown-divider">
+              </li>
+              <li class="dropdown-footer">
+                <a href="#">Show all notifications</a>
+              </li>
+            </ul>
+            <!-- End Notification Dropdown Items -->
+          </li>
+          <!-- End Notification Nav -->
+          <li class="nav-item dropdown">
+            <a class="nav-link nav-icon" href="#" data-bs-toggle="dropdown">
+              <i class="bi bi-chat-left-text"></i>
+              <span class="badge bg-success badge-number">3</span>
+            </a>
+            <!-- End Messages Icon -->
+            <ul class="dropdown-menu dropdown-menu-end dropdown-menu-arrow messages">
+              <li class="dropdown-header"> You have 3 new messages <a href="#">
+                  <span class="badge rounded-pill bg-primary p-2 ms-2">View all</span>
+                </a>
+              </li>
+              <li>
+                <hr class="dropdown-divider">
+              </li>
+              <li class="message-item">
+                <a href="#">
+                  <img src="assets/img/messages-1.jpg" alt="" class="rounded-circle">
+                  <div>
+                    <h4>Maria Hudson</h4>
+                    <p>Velit asperiores et ducimus soluta repudiandae labore officia est ut...</p>
+                    <p>4 hrs. ago</p>
+                  </div>
+                </a>
+              </li>
+              <li>
+                <hr class="dropdown-divider">
+              </li>
+              <li class="message-item">
+                <a href="#">
+                  <img src="assets/img/messages-2.jpg" alt="" class="rounded-circle">
+                  <div>
+                    <h4>Anna Nelson</h4>
+                    <p>Velit asperiores et ducimus soluta repudiandae labore officia est ut...</p>
+                    <p>6 hrs. ago</p>
+                  </div>
+                </a>
+              </li>
+              <li>
+                <hr class="dropdown-divider">
+              </li>
+              <li class="message-item">
+                <a href="#">
+                  <img src="assets/img/messages-3.jpg" alt="" class="rounded-circle">
+                  <div>
+                    <h4>David Muldon</h4>
+                    <p>Velit asperiores et ducimus soluta repudiandae labore officia est ut...</p>
+                    <p>8 hrs. ago</p>
+                  </div>
+                </a>
+              </li>
+              <li>
+                <hr class="dropdown-divider">
+              </li>
+              <li class="dropdown-footer">
+                <a href="#">Show all messages</a>
+              </li>
+            </ul>
+            <!-- End Messages Dropdown Items -->
+          </li>
+          <!-- End Messages Nav -->
+          <li class="nav-item dropdown pe-3">
+            <a class="nav-link nav-profile d-flex align-items-center pe-0" href="#" data-bs-toggle="dropdown">
+              <img src="assets/img/profile-img.png" alt="Profile" class="rounded-circle">
+              <span class="d-none d-md-block dropdown-toggle ps-2">K. Anderson</span>
+            </a>
+            <!-- End Profile Iamge Icon -->
+            <ul class="dropdown-menu dropdown-menu-end dropdown-menu-arrow profile">
+              <li class="dropdown-header">
+                <h6>Kevin Anderson</h6>
+                <span>Web Designer</span>
+              </li>
+              <li>
+                <hr class="dropdown-divider">
+              </li>
+              <li>
+                <a class="dropdown-item d-flex align-items-center" href="users-profile.html">
+                  <i class="bi bi-person"></i>
+                  <span>My Profile</span>
+                </a>
+              </li>
+              <li>
+                <hr class="dropdown-divider">
+              </li>
+              <li>
+                <a class="dropdown-item d-flex align-items-center" href="users-profile.html">
+                  <i class="bi bi-gear"></i>
+                  <span>Account Settings</span>
+                </a>
+              </li>
+              <li>
+                <hr class="dropdown-divider">
+              </li>
+              <li>
+                <a class="dropdown-item d-flex align-items-center" href="pages-faq.html">
+                  <i class="bi bi-question-circle"></i>
+                  <span>Need Help?</span>
+                </a>
+              </li>
+              <li>
+                <hr class="dropdown-divider">
+              </li>
+              <li>
+                <a class="dropdown-item d-flex align-items-center" href="#">
+                  <i class="bi bi-box-arrow-right"></i>
+                  <span>Sign Out</span>
+                </a>
+              </li>
+            </ul>
+            <!-- End Profile Dropdown Items -->
+          </li>
+          <!-- End Profile Nav -->
+        </ul>
+      </nav>
+      <!-- End Icons Navigation -->
+    </header>
+    <!-- End Header -->
+    <!-- ======= Sidebar ======= -->
+    <aside id="sidebar" class="sidebar">
+      <ul class="sidebar-nav" id="sidebar-nav">
+        <li class="nav-item">
+          <a class="nav-link " href="index.html">
+            <i class="bi bi-grid"></i>
+            <span>Dashboard</span>
+          </a>
+        </li>
+        <!-- End Dashboard Nav -->
+        <li class="nav-item">
+          <a class="nav-link collapsed" data-bs-target="#components-nav" data-bs-toggle="collapse" href="#">
+            <i class="bi bi-menu-button-wide"></i>
+            <span>Components</span>
+            <i class="bi bi-chevron-down ms-auto"></i>
+          </a>
+          <ul id="components-nav" class="nav-content collapse " data-bs-parent="#sidebar-nav">
+            <li>
+              <a href="components-alerts.html">
+                <i class="bi bi-circle"></i>
+                <span>Alerts</span>
+              </a>
+            </li>
+            <li>
+              <a href="components-accordion.html">
+                <i class="bi bi-circle"></i>
+                <span>Accordion</span>
+              </a>
+            </li>
+            <li>
+              <a href="components-badges.html">
+                <i class="bi bi-circle"></i>
+                <span>Badges</span>
+              </a>
+            </li>
+            <li>
+              <a href="components-breadcrumbs.html">
+                <i class="bi bi-circle"></i>
+                <span>Breadcrumbs</span>
+              </a>
+            </li>
+            <li>
+              <a href="components-buttons.html">
+                <i class="bi bi-circle"></i>
+                <span>Buttons</span>
+              </a>
+            </li>
+            <li>
+              <a href="components-cards.html">
+                <i class="bi bi-circle"></i>
+                <span>Cards</span>
+              </a>
+            </li>
+            <li>
+              <a href="components-carousel.html">
+                <i class="bi bi-circle"></i>
+                <span>Carousel</span>
+              </a>
+            </li>
+            <li>
+              <a href="components-list-group.html">
+                <i class="bi bi-circle"></i>
+                <span>List group</span>
+              </a>
+            </li>
+            <li>
+              <a href="components-modal.html">
+                <i class="bi bi-circle"></i>
+                <span>Modal</span>
+              </a>
+            </li>
+            <li>
+              <a href="components-tabs.html">
+                <i class="bi bi-circle"></i>
+                <span>Tabs</span>
+              </a>
+            </li>
+            <li>
+              <a href="components-pagination.html">
+                <i class="bi bi-circle"></i>
+                <span>Pagination</span>
+              </a>
+            </li>
+            <li>
+              <a href="components-progress.html">
+                <i class="bi bi-circle"></i>
+                <span>Progress</span>
+              </a>
+            </li>
+            <li>
+              <a href="components-spinners.html">
+                <i class="bi bi-circle"></i>
+                <span>Spinners</span>
+              </a>
+            </li>
+            <li>
+              <a href="components-tooltips.html">
+                <i class="bi bi-circle"></i>
+                <span>Tooltips</span>
+              </a>
+            </li>
+          </ul>
+        </li>
+        <!-- End Components Nav -->
+        <li class="nav-item">
+          <a class="nav-link collapsed" data-bs-target="#forms-nav" data-bs-toggle="collapse" href="#">
+            <i class="bi bi-journal-text"></i>
+            <span>Forms</span>
+            <i class="bi bi-chevron-down ms-auto"></i>
+          </a>
+          <ul id="forms-nav" class="nav-content collapse " data-bs-parent="#sidebar-nav">
+            <li>
+              <a href="forms-elements.html">
+                <i class="bi bi-circle"></i>
+                <span>Form Elements</span>
+              </a>
+            </li>
+            <li>
+              <a href="forms-layouts.html">
+                <i class="bi bi-circle"></i>
+                <span>Form Layouts</span>
+              </a>
+            </li>
+            <li>
+              <a href="forms-editors.html">
+                <i class="bi bi-circle"></i>
+                <span>Form Editors</span>
+              </a>
+            </li>
+            <li>
+              <a href="forms-validation.html">
+                <i class="bi bi-circle"></i>
+                <span>Form Validation</span>
+              </a>
+            </li>
+          </ul>
+        </li>
+        <!-- End Forms Nav -->
+        <li class="nav-item">
+          <a class="nav-link collapsed" data-bs-target="#tables-nav" data-bs-toggle="collapse" href="#">
+            <i class="bi bi-layout-text-window-reverse"></i>
+            <span>Tables</span>
+            <i class="bi bi-chevron-down ms-auto"></i>
+          </a>
+          <ul id="tables-nav" class="nav-content collapse " data-bs-parent="#sidebar-nav">
+            <li>
+              <a href="tables-general.html">
+                <i class="bi bi-circle"></i>
+                <span>General Tables</span>
+              </a>
+            </li>
+            <li>
+              <a href="tables-data.html">
+                <i class="bi bi-circle"></i>
+                <span>Data Tables</span>
+              </a>
+            </li>
+          </ul>
+        </li>
+        <!-- End Tables Nav -->
+        <li class="nav-item">
+          <a class="nav-link collapsed" data-bs-target="#charts-nav" data-bs-toggle="collapse" href="#">
+            <i class="bi bi-bar-chart"></i>
+            <span>Charts</span>
+            <i class="bi bi-chevron-down ms-auto"></i>
+          </a>
+          <ul id="charts-nav" class="nav-content collapse " data-bs-parent="#sidebar-nav">
+            <li>
+              <a href="charts-chartjs.html">
+                <i class="bi bi-circle"></i>
+                <span>Chart.js</span>
+              </a>
+            </li>
+            <li>
+              <a href="charts-apexcharts.html">
+                <i class="bi bi-circle"></i>
+                <span>ApexCharts</span>
+              </a>
+            </li>
+            <li>
+              <a href="charts-echarts.html">
+                <i class="bi bi-circle"></i>
+                <span>ECharts</span>
+              </a>
+            </li>
+          </ul>
+        </li>
+        <!-- End Charts Nav -->
+        <li class="nav-item">
+          <a class="nav-link collapsed" data-bs-target="#icons-nav" data-bs-toggle="collapse" href="#">
+            <i class="bi bi-gem"></i>
+            <span>Icons</span>
+            <i class="bi bi-chevron-down ms-auto"></i>
+          </a>
+          <ul id="icons-nav" class="nav-content collapse " data-bs-parent="#sidebar-nav">
+            <li>
+              <a href="icons-bootstrap.html">
+                <i class="bi bi-circle"></i>
+                <span>Bootstrap Icons</span>
+              </a>
+            </li>
+            <li>
+              <a href="icons-remix.html">
+                <i class="bi bi-circle"></i>
+                <span>Remix Icons</span>
+              </a>
+            </li>
+            <li>
+              <a href="icons-boxicons.html">
+                <i class="bi bi-circle"></i>
+                <span>Boxicons</span>
+              </a>
+            </li>
+          </ul>
+        </li>
+        <!-- End Icons Nav -->
+        <li class="nav-heading">Pages</li>
+        <li class="nav-item">
+          <a class="nav-link collapsed" href="users-profile.html">
+            <i class="bi bi-person"></i>
+            <span>Profile</span>
+          </a>
+        </li>
+        <!-- End Profile Page Nav -->
+        <li class="nav-item">
+          <a class="nav-link collapsed" href="pages-faq.html">
+            <i class="bi bi-question-circle"></i>
+            <span>F.A.Q</span>
+          </a>
+        </li>
+        <!-- End F.A.Q Page Nav -->
+        <li class="nav-item">
+          <a class="nav-link collapsed" href="pages-contact.html">
+            <i class="bi bi-envelope"></i>
+            <span>Contact</span>
+          </a>
+        </li>
+        <!-- End Contact Page Nav -->
+        <li class="nav-item">
+          <a class="nav-link collapsed" href="pages-register.html">
+            <i class="bi bi-card-list"></i>
+            <span>Register</span>
+          </a>
+        </li>
+        <!-- End Register Page Nav -->
+        <li class="nav-item">
+          <a class="nav-link collapsed" href="pages-login.html">
+            <i class="bi bi-box-arrow-in-right"></i>
+            <span>Login</span>
+          </a>
+        </li>
+        <!-- End Login Page Nav -->
+        <li class="nav-item">
+          <a class="nav-link collapsed" href="pages-error-404.html">
+            <i class="bi bi-dash-circle"></i>
+            <span>Error 404</span>
+          </a>
+        </li>
+        <!-- End Error 404 Page Nav -->
+        <li class="nav-item">
+          <a class="nav-link collapsed" href="pages-blank.html">
+            <i class="bi bi-file-earmark"></i>
+            <span>Blank</span>
+          </a>
+        </li>
+        <!-- End Blank Page Nav -->
+      </ul>
+    </aside>
+    <!-- End Sidebar-->
+
+
+    <main id="main" class="main">
+      <section class="section1">
+        <div class="container">
+          <div class="row">
+            <div class="heading_text">
+              <h1 class="fw-bold fs-4 text-center text-lg-start mt-4 mb-0">Pricing</h1>
+              <hr class="mt-2 mb-5">
+            </div>
+            <div class="text-center mb-4">
+              <h4 class="fw-semibold fs-22">Plans &amp; Pricing</h4>
+              <p class="text-muted mb-4 fs-15">Simple pricing. No hidden fees. Advanced features for you business.</p>
+              <div class="d-inline-flex">
+                <ul class="nav nav-pills arrow-navtabs plan-nav rounded mb-3 p-1" id="pills-tab" role="tablist">
+                  <li class="nav-item" role="presentation">
+                    <button class="nav-link fw-semibold active" id="month-tab" data-bs-toggle="pill" data-bs-target="#month" type="button" role="tab" aria-selected="true">Monthly</button>
+                  </li>
+                  <li class="nav-item" role="presentation">
+                    <button class="nav-link fw-semibold" id="annual-tab" data-bs-toggle="pill" data-bs-target="#annual" type="button" role="tab" aria-selected="false" tabindex="-1">Annually <span class="badge bg-success">25% Off</span>
+                    </button>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+<!-- ----------------- -->
+
+<section class="section2">
+    <div class="container">
+
+            <div class="row">
+                <div class="col-xxl-3 col-lg-6">
+                    <div class="card pricing-box">
+                        <div class="card-body m-2 p-4">
+                            <div class="d-flex align-items-center mb-3">
+                                <div class="flex-grow-1">
+                                    <h5 class="mb-0 fw-semibold fs-5">Starter</h5>
+                                </div>
+                                <div class="ms-auto">
+                                    <h2 class="month mb-0 fs-3" style="display: block;">$19 <small class="fs-6 text-muted">/Month</small></h2>
+                                    <h2 class="annual mb-0 fs-6" style="display: none;"><small class="fs-16"><del>$228</del></small> $171 <small class="fs-13 text-muted">/Year</small></h2>
+                                </div>
+                            </div>
+
+                            <p class="fs-6 text-muted">The perfect way to get started and get used to our tools.</p>
+                            <ul class="list-unstyled vstack gap-3">
+                                <li>
+                                    <div class="d-flex">
+                                        <div class="flex-shrink-0 text-success me-1">
+                                            <i class="ri-checkbox-circle-fill fs-15 align-middle"></i>
+                                        </div>
+                                        <div class="flex-grow-1 project_page">
+                                            <b>3</b> Projects
+                                        </div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="d-flex">
+                                        <div class="flex-shrink-0 text-success me-1">
+                                            <i class="ri-checkbox-circle-fill fs-15 align-middle"></i>
+                                        </div>
+                                        <div class="flex-grow-1 project_page">
+                                            <b>299</b> Customers
+                                        </div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="d-flex">
+                                        <div class="flex-shrink-0 text-success me-1">
+                                            <i class="ri-checkbox-circle-fill fs-15 align-middle"></i>
+                                        </div>
+                                        <div class="flex-grow-1 project_page">
+                                            Scalable Bandwidth
+                                        </div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="d-flex">
+                                        <div class="flex-shrink-0 text-success me-1">
+                                            <i class="ri-checkbox-circle-fill fs-15 align-middle"></i>
+                                        </div>
+                                        <div class="flex-grow-1 project_page">
+                                            <b>5</b> FTP Login
+                                        </div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="d-flex">
+                                        <div class="flex-shrink-0 text-danger me-1">
+                                            <i class="ri-close-circle-fill fs-15 align-middle"></i>
+                                        </div>
+                                        <div class="flex-grow-1 project_page">
+                                            <b>24/7</b> Support
+                                        </div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="d-flex">
+                                        <div class="flex-shrink-0 text-danger me-1">
+                                            <i class="ri-close-circle-fill fs-15 align-middle"></i>
+                                        </div>
+                                        <div class="flex-grow-1 project_page">
+                                            <b>Unlimited</b> Storage
+                                        </div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="d-flex">
+                                        <div class="flex-shrink-0 text-danger me-1">
+                                            <i class="ri-close-circle-fill fs-15 align-middle"></i>
+                                        </div>
+                                        <div class="flex-grow-1 project_page">
+                                            Domain
+                                        </div>
+                                    </div>
+                                </li>
+                            </ul>
+                            <div class="mt-3 pt-2">
+                                <a href="#" class="btn btn-current-plan w-100">Your Current Plan</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--end col-->
+
+                <div class="col-xxl-3 col-lg-6">
+                    <div class="card pricing-box">
+                        <div class="card-body m-2 p-4">
+                            <div class="d-flex align-items-center mb-3">
+                                <div class="flex-grow-1">
+                                    <h5 class="mb-0 fw-semibold fs-5">Professional</h5>
+                                </div>
+                                <div class="ms-auto">
+                                    <h2 class="month mb-0 fs-3" style="display: block;">$29 <small class="fs-6 text-muted">/Month</small></h2>
+                                    <h2 class="annual mb-0 fs-6" style="display: none;"><small class="fs-16"><del>$348</del></small> $261 <small class="fs-13 text-muted">/Year</small></h2>
+                                </div>
+                            </div>
+                            <p class="fs-8 text-muted">Excellent for scalling teams to build culture. Special plan for professional business.</p>
+                            <ul class="list-unstyled vstack gap-3">
+                                <li>
+                                    <div class="d-flex">
+                                        <div class="flex-shrink-0 text-success me-1">
+                                            <i class="ri-checkbox-circle-fill fs-15 align-middle"></i>
+                                        </div>
+                                        <div class="flex-grow-1 project_page">
+                                            <b>8</b> Projects
+                                        </div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="d-flex">
+                                        <div class="flex-shrink-0 text-success me-1">
+                                            <i class="ri-checkbox-circle-fill fs-15 align-middle"></i>
+                                        </div>
+                                        <div class="flex-grow-1 project_page">
+                                            <b>449</b> Customers
+                                        </div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="d-flex">
+                                        <div class="flex-shrink-0 text-success me-1">
+                                            <i class="ri-checkbox-circle-fill fs-15 align-middle"></i>
+                                        </div>
+                                        <div class="flex-grow-1 project_page">
+                                            Scalable Bandwidth
+                                        </div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="d-flex">
+                                        <div class="flex-shrink-0 text-success me-1">
+                                            <i class="ri-checkbox-circle-fill fs-15 align-middle"></i>
+                                        </div>
+                                        <div class="flex-grow-1 project_page">
+                                            <b>7</b> FTP Login
+                                        </div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="d-flex">
+                                        <div class="flex-shrink-0 text-success me-1">
+                                            <i class="ri-checkbox-circle-fill fs-15 align-middle"></i>
+                                        </div>
+                                        <div class="flex-grow-1 project_page">
+                                            <b>24/7</b> Support
+                                        </div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="d-flex">
+                                        <div class="flex-shrink-0 text-danger me-1">
+                                            <i class="ri-close-circle-fill fs-15 align-middle"></i>
+                                        </div>
+                                        <div class="flex-grow-1 project_page">
+                                            <b>Unlimited</b> Storage
+                                        </div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="d-flex domain_plan">
+                                        <div class="flex-shrink-0 text-danger me-1">
+                                            <i class="ri-close-circle-fill fs-15 align-middle"></i>
+                                        </div>
+                                        <div class="flex-grow-1 project_page">
+                                            Domain
+                                        </div>
+                                    </div>
+                                </li>
+                            </ul>
+                            <div class="mt-3 pt-2">
+                                <a href="#" class="btn btn-outline-primary w-100">Change Plan</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--end col-->
+
+        </div>
+    </div>
+</section>
+<!-- ------------------------ -->
+<!-- ========================== -->
+
+<Section class="mt-5 section3">
+    <div class="container">
+        <div class="row">
+            
+            <div class="text-center mb-4 pb-2">
+                <h4 class="fw-semibold fs-22">Choose the plan that's right for you</h4>
+                <p class="text-muted mb-4 fs-15">Simple pricing. No hidden fees. Advanced features for you business.</p>
+            </div>
+
+            
+            <section class="pricing py-5">
+                <div class="container">
+                  <div class="row">
+                    <!-- Free Tier -->
+                    <div class="col-lg-4">
+                      <div class="card mb-5 mb-lg-0">
+                        <div class="card-body">
+                          <h5 class="card-title text-muted text-uppercase text-center">Free</h5>
+                          <h6 class="card-price text-center">$0<span class="period">/month</span></h6>
+                          <hr>
+                          <ul class="fa-ul">
+                            <li><span class="fa-li"><i class="fas fa-check"></i></span>Single User</li>
+                            <li><span class="fa-li"><i class="fas fa-check"></i></span>5GB Storage</li>
+                            <li><span class="fa-li"><i class="fas fa-check"></i></span>Unlimited Public Projects</li>
+                            <li><span class="fa-li"><i class="fas fa-check"></i></span>Community Access</li>
+                            <li class="text-muted"><span class="fa-li"><i class="fas fa-times"></i></span>Unlimited
+                              Private Projects</li>
+                            <li class="text-muted"><span class="fa-li"><i class="fas fa-times"></i></span>Dedicated
+                              Phone Support</li>
+                            <li class="text-muted"><span class="fa-li"><i class="fas fa-times"></i></span>Free Subdomain
+                            </li>
+                            <li class="text-muted"><span class="fa-li"><i class="fas fa-times"></i></span>Monthly Status
+                              Reports</li>
+                          </ul>
+                          <div class="d-grid">
+                            <a href="#" class="btn btn-primary text-uppercase">Button</a>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <!-- Plus Tier -->
+                    <div class="col-lg-4">
+                      <div class="card mb-5 mb-lg-0">
+                        <div class="card-body">
+                          <h5 class="card-title text-muted text-uppercase text-center">Plus</h5>
+                          <h6 class="card-price text-center">$9<span class="period">/month</span></h6>
+                          <hr>
+                          <ul class="fa-ul fs-6 mt-3">
+                            <li><span class="fa-li"><i class="fas fa-check"></i></span><strong>5 Users</strong></li>
+                            <li><span class="fa-li"><i class="fas fa-check"></i></span>50GB Storage</li>
+                            <li><span class="fa-li"><i class="fas fa-check"></i></span>Unlimited Public Projects</li>
+                            <li><span class="fa-li"><i class="fas fa-check"></i></span>Community Access</li>
+                            <li><span class="fa-li"><i class="fas fa-check"></i></span>Unlimited Private Projects</li>
+                            <li><span class="fa-li"><i class="fas fa-check"></i></span>Dedicated Phone Support</li>
+                            <li><span class="fa-li"><i class="fas fa-check"></i></span>Free Subdomain</li>
+                            <li class="text-muted"><span class="fa-li"><i class="fas fa-times"></i></span>Monthly Status
+                              Reports</li>
+                          </ul>
+                          <div class="d-grid">
+                            <a href="#" class="btn btn-primary text-uppercase">Button</a>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <!-- Pro Tier -->
+                    <div class="col-lg-4">
+                      <div class="card">
+                        <div class="card-body">
+                          <h5 class="card-title text-muted text-uppercase text-center">Pro</h5>
+                          <h6 class="card-price text-center">$49<span class="period">/month</span></h6>
+                          <hr>
+                          <ul class="fa-ul fs-6 mt-3">
+                            <li><span class="fa-li"><i class="fas fa-check"></i></span><strong>Unlimited Users</strong>
+                            </li>
+                            <li><span class="fa-li"><i class="fas fa-check"></i></span>150GB Storage</li>
+                            <li><span class="fa-li"><i class="fas fa-check"></i></span>Unlimited Public Projects</li>
+                            <li><span class="fa-li"><i class="fas fa-check"></i></span>Community Access</li>
+                            <li><span class="fa-li"><i class="fas fa-check"></i></span>Unlimited Private Projects</li>
+                            <li><span class="fa-li"><i class="fas fa-check"></i></span>Dedicated Phone Support</li>
+                            <li><span class="fa-li"><i class="fas fa-check"></i></span><strong>Unlimited</strong> Free
+                              Subdomains</li>
+                            <li><span class="fa-li"><i class="fas fa-check"></i></span>Monthly Status Reports</li>
+                          </ul>
+                          <div class="d-grid">
+                            <a href="#" class="btn btn-primary text-uppercase">Button</a>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </section>
+
+<!-- ------------------------- -->
+<!-- ============================== -->
+
+<section class="mt-5 section_new">
+    <div class="container">
+
+        <div class="row">
+            <div class="text-center mb-4 pb-2">
+                <h4 class="fw-semibold fs-22">Simple Pricing Plan</h4>
+                <p class="text-muted mb-4 fs-15">Simple pricing. No hidden fees. Advanced features for you business.</p>
+
+            </div>
+
+
+            <div class="row">
+                <div class="col-lg-6">
+                    <div class="card pricing-box text-center">
+                        <div class="row g-0">
+                            <div class="col-lg-6">
+                                <div class="card-body mt-3 h-100">
+                                    <div>
+                                        <h5 class="mb-1 fs-5">Starter</h5>
+                                        <p class="text-muted" style="font-size: 12px;">Starter plans</p>
+                                    </div>
+
+                                    <div class="py-4">
+                                        <h2 class="fw-bold fs-3"><sup><small>$</small></sup>22 <span class="fs-6 text-muted"> /Per month</span></h2>
+                                    </div>
+
+                                    <div class="text-left plan-btn mt-2">
+                                        <a href="#" class="btn btn_sign w-sm waves-effect waves-light">Sign up</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <!--end col-->
+                            <div class="col-lg-6">
+                                <div class="card-body border-start py-3 mt-lg-0">
+                                    <div class="card-header py-2 bg-light">
+                                        <h5 class="fs-6 mb-0">Plan Features:</h5>
+                                    </div>
+                                    <div class="card-body pb-0 fs-6 mt-3">
+                                        <ul class="list-unstyled vstack gap-3 mb-0 fs-6 mt-3">
+                                            <li>Users: <span class="text-success fw-semibold">1</span></li>
+                                            <li>Storage: <span class="text-success fw-semibold">01 GB</span></li>
+                                            <li>Domain: <span class="text-success fw-semibold">No</span></li>
+                                            <li>Support: <span class="text-success fw-semibold">No</span></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <!--end col-->
+                        </div>
+                        <!--end row-->
+                    </div>
+                </div>
+                <!--end row-->
+
+                <div class="col-lg-6">
+                    <div class="card pricing-box ribbon-box ribbon-fill text-center">
+                     
+                        <div class="row g-0">
+                            <div class="col-lg-6">
+                                <div class="card-body mt-3 h-100">
+                                    <div>
+                                        <h5 class="mb-1 fs-5">Professional</h5>
+                                        <p class="text-muted" style="font-size: 12px;">Professional plans</p>
+                                    </div>
+
+                                    <div class="py-4">
+                                        <h2 class="fs-3 fw-bold"><sup><small>$</small></sup>29 <span class="fs-6 text-muted">/Per month</span></h2>
+                                    </div>
+
+                                    <div class="plan-btn mt-2">
+                                        <a href="#;" class="btn btn_sign w-sm waves-effect waves-light">Sign up</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <!--end col-->
+                            <div class="col-lg-6">
+                                <div class="card-body border-start mt-4 mt-lg-0">
+                                    <div class="card-header mt-3 py-2 bg-light">
+                                        <h5 class="fs-6 mb-0">Plan Features:</h5>
+                                    </div>
+                                    <div class="card-body pb-0 fs-6 mt-3">
+                                        <ul class="list-unstyled vstack gap-3 mb-0">
+                                            <li>Users: <span class="text-success fw-semibold">3</span></li>
+                                            <li>Storage: <span class="text-success fw-semibold">10 GB</span></li>
+                                            <li>Domain: <span class="text-success fw-semibold">Yes</span></li>
+                                            <li>Support: <span class="text-success fw-semibold">No</span></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <!--end col-->
+                        </div>
+                        <!--end row-->
+                    </div>
+                </div>
+                <!--end row-->
+
+
+                
+
+        </div>       
+    </div>
+</section>
+
+
+</main> <!---main end-->
+    <!-- ======= Footer ======= -->
+    <footer id="footer" class="footer">
+      <div class="copyright"> &copy; Copyright <strong>
+          <span>vd-controlpanel</span>
+        </strong>. All Rights Reserved </div>
+      <div class="credits">
+        <!-- All the links in the footer should remain intact. -->
+        <!-- You can delete the links only if you purchased the pro version. -->
+        <!-- Licensing information: https://bootstrapmade.com/license/ -->
+        <!-- Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/nice-admin-bootstrap-admin-html-template/ -->
+    </footer>
+    <!-- End Footer -->
+    <a href="#" class="back-to-top d-flex align-items-center justify-content-center">
+      <i class="bi bi-arrow-up-short"></i>
+    </a>
+    <!-- bootstrap js file -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Vendor JS Files -->
+    <script src="assets/vendor/apexcharts/apexcharts.min.js"></script>
+    <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/vendor/chart.js/chart.umd.js"></script>
+    <script src="assets/vendor/echarts/echarts.min.js"></script>
+    <script src="assets/vendor/quill/quill.min.js"></script>
+    <script src="assets/vendor/simple-datatables/simple-datatables.js"></script>
+    <script src="assets/vendor/tinymce/tinymce.min.js"></script>
+    <script src="assets/vendor/php-email-form/validate.js"></script>
+    <!-- Template Main JS File -->
+    <script src="assets/js/main.js"></script>
+  </body>
+</html>
