@@ -59,6 +59,25 @@ input#start {
     color: #999999;
     font-size: 14px;
 }
+.input-step input {
+    width: 4em;
+    height: 100%;
+    text-align: center;
+    border: 1px solid #9999994f;
+    color: var(--vz-body-color);
+    border-radius: var(--vz-border-radius);
+}
+.input-step {
+    border: 1px solid #00000012;
+    padding: 5px 0;
+}
+button.btn.btn_step {
+    background: #f8f8f9;
+    margin: 0px 10px;
+    width: 50px;
+    height: 30px;
+    line-height: 0;
+}
 </style>
 </head>
   <body>
@@ -556,16 +575,16 @@ input#start {
         <div class="container">
           <div class="row">
        
-              <div class="col-lg-3 col-sm-6">
-                <label for="invoicenoInput">Invoice No</label>
-                <input type="text" class="form-control bg-white border-1" id="invoicenoInput" placeholder="Invoice No" value="#VL25000355" readonly="readonly">
+            <div class="col-lg-3 col-sm-6">
+              <label for="invoicenoInput">Invoice No</label>
+              <input type="text" class="form-control bg-white border-1" id="invoicenoInput" placeholder="Invoice No" value="#VL25000355" readonly="readonly">
             </div>
 
             <div class="col-lg-3 col-sm-6">
               <div>
-                  <label for="date-field">Select Date-time</label>
-                  </div>
-                  <input type="date" class="form-control bg-white border-1" placeholder="Select Date-time" id="start" name="trip-start" />
+                <label for="date-field">Select Date-time</label>
+              </div>
+                <input type="date" class="form-control bg-white border-1" placeholder="Select Date-time" id="start" name="trip-start" />
              
           </div>
            
@@ -682,41 +701,119 @@ input#start {
     <div class="container">
       <div class="row">
 
-        <div class="datatable-container">
-          <table class="table datatable datatable-table">
-            <thead>
-              <tr>
-                <th data-sortable="true" style="width: 26.821862348178136%;">
-                  <button class="datatable-sorter">
-                  #  Product Details
-        </button>
-      </th>
-      <th data-sortable="true" style="width: 9.210526315789473%;">
-        <button class="datatable-sorter">Ext.</button></th><th data-sortable="true" style="width: 28.542510121457486%;">
-          <button class="datatable-sorter">City</button>
-        </th>
-        <th data-format="YYYY/DD/MM" data-sortable="true" data-type="date" style="width: 16.902834008097166%;">
-          <button class="datatable-sorter">Start Date</button>
-        </th>
-        <th data-sortable="true" class="red" style="width: 18.522267206477732%;">
-          <button class="datatable-sorter">Completion</button>
-        </th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr data-index="0"><td>Unity Pugh</td><td>9958</td><td>Curicó</td><td>2005/02/11</td><td class="green">37%</td></tr>
-   
-      <tr id="newForm" style="display: none;"><td class="d-none" colspan="5"><p>Add New Form</p></td>
-    </tr>
-      <tr>
-          <td colspan="5">
-              <a href="javascript:new_link()" id="add-item" class="btn btn-soft-secondary fw-medium"><i class="ri-add-fill me-1 align-bottom"></i> Add Item</a>
-          </td>
-      </tr>
-      
-  </tbody>
-    </table>
-    </div>
+
+
+        <div class="table-responsive">
+          <table class="invoice-table table table-borderless table-nowrap mb-0">
+              <thead class="align-middle">
+                  <tr class="table-active">
+                      <th scope="col" style="width: 50px;">#</th>
+                      <th scope="col">
+                          Product Details
+                      </th>
+                      <th scope="col" style="width: 120px;">
+                          <div class="d-flex currency-select input-light align-items-center">
+                            Rate
+                           
+                          </div>
+                      </th>
+                      <th scope="col" style="width: 120px;">Quantity</th>
+                      <th scope="col" class="text-end" style="width: 150px;">Amount</th>
+                      <th scope="col" class="text-end" style="width: 105px;"></th>
+                  </tr>
+              </thead>
+              <tbody id="newlink">
+                  <tr id="1" class="product">
+                      <th scope="row" class="product-id">1</th>
+                      <td class="text-start">
+                          <div class="mb-2">
+                              <input type="text" class="form-control bg-light border-0" id="productName-1" placeholder="Product Name" required="">
+                              <div class="invalid-feedback">
+                                  Please enter a product name
+                              </div>
+                          </div>
+                          <textarea class="form-control bg-light border-0" id="productDetails-1" rows="2" placeholder="Product Details"></textarea>
+                      </td>
+                      <td>
+                          <input type="number" class="form-control product-price bg-light border-0" id="productRate-1" step="0.01" placeholder="0.00" required="">
+                          <div class="invalid-feedback">
+                              Please enter a rate
+                          </div>
+                      </td>
+                      <td>
+                          <div class="d-flex input-step">
+                          <button class="btn btn_step" onclick="totalClick(1)">+</button>
+                              <span id="totalClicks">0</span>  
+                          <button class="btn btn_step" onclick="totalClick(-1)">-</button>
+                          </div>
+                          
+                      </td>
+                      <td class="text-end">
+                          <div>
+                              <input type="text" class="form-control bg-light border-0 product-line-price" id="productPrice-1" placeholder="$0.00" readonly="">
+                          </div>
+                      </td>
+                      <td class="product-removal">
+                          <a href="javascript:void(0)" class="btn btn-success">Delete</a>
+                      </td>
+                  </tr>
+              
+          </tbody>
+              <tbody>
+                  <tr id="newForm" style="display: none;"><td class="d-none" colspan="5"><p>Add New Form</p></td></tr>
+                  <tr>
+                      <td colspan="5">
+                          <button id="add-item" class="btn btn-soft-secondary fw-medium">
+                            <i class="ri-add-fill me-1 align-bottom"></i> Add Item</button>
+                      </td>
+                  </tr>
+                  <tr class="border-top border-top-dashed mt-2">
+                      <td colspan="3"></td>
+                      <td colspan="2" class="p-0">
+                          <table class="table table-borderless table-sm table-nowrap align-middle mb-0">
+                              <tbody>
+                                  <tr>
+                                      <th scope="row">Sub Total</th>
+                                      <td style="width:150px;">
+                                          <input type="text" class="form-control bg-light border-0" id="cart-subtotal" placeholder="$0.00" readonly="">
+                                      </td>
+                                  </tr>
+                                  <tr>
+                                      <th scope="row">Estimated Tax (12.5%)</th>
+                                      <td>
+                                          <input type="text" class="form-control bg-light border-0" id="cart-tax" placeholder="$0.00" readonly="">
+                                      </td>
+                                  </tr>
+                                  <tr>
+                                      <th scope="row">Discount <small class="text-muted">(VELZON15)</small></th>
+                                      <td>
+                                          <input type="text" class="form-control bg-light border-0" id="cart-discount" placeholder="$0.00" readonly="">
+                                      </td>
+                                  </tr>
+                                  <tr>
+                                      <th scope="row">Shipping Charge</th>
+                                      <td>
+                                          <input type="text" class="form-control bg-light border-0" id="cart-shipping" placeholder="$0.00" readonly="">
+                                      </td>
+                                  </tr>
+                                  <tr class="border-top border-top-dashed">
+                                      <th scope="row">Total Amount</th>
+                                      <td>
+                                          <input type="text" class="form-control bg-light border-0" id="cart-total" placeholder="$0.00" readonly="">
+                                      </td>
+                                  </tr>
+                              </tbody>
+                          </table>
+                          <!--end table-->
+                      </td>
+                  </tr>
+              </tbody>
+          </table>
+          <!--end table-->
+      </div>
+
+
+
       </div>
     </div>
   </section>
@@ -732,7 +829,7 @@ input#start {
         <div class="col-lg-4">
           <div class="mb-2">
             <label for="choices-payment-status">Payment Details</label>
-            <select class="form-select border-0" aria-label="Default select example">
+            <select class="form-select border-1" aria-label="Default select example">
               <option selected>Select Payment Status</option>
               <option value="1">Paid</option>
               <option value="2">Refund</option>
@@ -740,13 +837,13 @@ input#start {
             </select>
           </div>
           <div class="mb-2">
-              <input class="form-control bg-light border-0" type="text" id="cardholderName" placeholder="Card Holder Name">
+              <input class="form-control bg-light border-1" type="text" id="cardholderName" placeholder="Card Holder Name">
           </div>
           <div class="mb-2">
-              <input class="form-control bg-light border-0" type="text" id="cardNumber" placeholder="xxxx xxxx xxxx xxxx">
+              <input class="form-control bg-light border-1" type="text" id="cardNumber" placeholder="xxxx xxxx xxxx xxxx">
           </div>
           <div>
-              <input class="form-control  bg-light border-0" type="text" id="amountTotalPay" placeholder="$0.00" readonly="">
+              <input class="form-control  bg-light border-1" type="text" id="amountTotalPay" placeholder="$0.00" readonly="">
           </div>
       </div>
 
@@ -791,6 +888,58 @@ input#start {
     <script src="assets/js/main.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/fullcalendar@6.1.11/index.global.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@fullcalendar/bootstrap5@6.1.11/index.global.min.js"></script>
+    
+    <script>
+     
+     function totalClick(click) {
+                              const totalClicks = document.getElementById('totalClicks');  
+                            const sumvalue = parseInt(totalClicks.innerText) + click;
+                            console.log(sumvalue + click);    
+                            totalClicks.innerText = sumvalue;                
+                            }
 
+
+                  const button = document.getElementById("add-item");
+
+                    button.addEventListener("click", (event) => {
+                     let tableRow = `<tr id="1" class="product">
+                      <th scope="row" class="product-id">1</th>
+                      <td class="text-start">
+                          <div class="mb-2">
+                              <input type="text" class="form-control bg-light border-0" id="productName-1" placeholder="Product Name" required="">
+                              <div class="invalid-feedback">
+                                  Please enter a product name
+                              </div>
+                          </div>
+                          <textarea class="form-control bg-light border-0" id="productDetails-1" rows="2" placeholder="Product Details"></textarea>
+                      </td>
+                      <td>
+                          <input type="number" class="form-control product-price bg-light border-0" id="productRate-1" step="0.01" placeholder="0.00" required="">
+                          <div class="invalid-feedback">
+                              Please enter a rate
+                          </div>
+                      </td>
+                      <td>
+                          <div class="d-flex input-step">
+                          <button class="btn btn_step" onclick="totalClick(1)">+</button>
+                              <span id="totalClicks">2</span>  
+                          <button class="btn btn_step" onclick="totalClick(-1)">-</button>
+                          </div>
+                        
+                      </td>
+                      <td class="text-end">
+                          <div>
+                              <input type="text" class="form-control bg-light border-0 product-line-price" id="productPrice-1" placeholder="$0.00" readonly="">
+                          </div>
+                      </td>
+                      <td class="product-removal">
+                          <a href="javascript:void(0)" class="btn btn-success">Delete</a>
+                      </td>
+                  </tr>`;
+                  document.getElementById('newlink').innerHTML += tableRow;
+                  });
+                                    
+    </script>
+   
   </body>
 </html>
