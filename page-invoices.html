@@ -742,9 +742,9 @@ button.btn.btn_step {
                       </td>
                       <td>
                           <div class="d-flex input-step">
-                          <button class="btn btn_step" onclick="totalClick(1)">+</button>
-                              <span id="totalClicks">0</span>  
-                          <button class="btn btn_step" onclick="totalClick(-1)">-</button>
+                            <button class="btn btn_step dec_value">-</button>
+                            <span id="totalClickBtn">2</span>                          
+                        <button class="btn btn_step inc_value">+</button>
                           </div>
                           
                       </td>
@@ -890,54 +890,81 @@ button.btn.btn_step {
     <script src="https://cdn.jsdelivr.net/npm/@fullcalendar/bootstrap5@6.1.11/index.global.min.js"></script>
     
     <script>
+
+
      
-     function totalClick(click) {
-                              const totalClicks = document.getElementById('totalClicks');  
-                            const sumvalue = parseInt(totalClicks.innerText) + click;
-                            console.log(sumvalue + click);    
-                            totalClicks.innerText = sumvalue;                
-                            }
+    // function totalClick(click) {
+    //   const totalClicks = document.getElementById('totalClicks');  
+    //   const sumvalue = parseInt(totalClicks.innerText) + click;
+    //   console.log(sumvalue + click);    
+    //   totalClicks.innerText = sumvalue;   
+    // }
+   
+
+      
+   let decValue = document.querySelector('.dec_value');
+   decValue.addEventListener("click", (event) => {
+
+    let parent = event.target.parentElement;
+    var spanElement = parent.querySelector('span');
+    let sumvalue = parseInt(spanElement.innerText) - 1;
+    spanElement.textContent = sumvalue;  
+   });
+
+   let incValue = document.querySelector('.inc_value');
+   incValue.addEventListener("click", (event) => {
+
+    let parent = event.target.parentElement;
+    var spanElement = parent.querySelector('span');
+    let sumvalue = parseInt(spanElement.innerText) + 1;
+    spanElement.textContent = sumvalue;
+    
+
+   });
+   
 
 
-                  const button = document.getElementById("add-item");
+    
 
-                    button.addEventListener("click", (event) => {
-                     let tableRow = `<tr id="1" class="product">
-                      <th scope="row" class="product-id">1</th>
-                      <td class="text-start">
-                          <div class="mb-2">
-                              <input type="text" class="form-control bg-light border-0" id="productName-1" placeholder="Product Name" required="">
-                              <div class="invalid-feedback">
-                                  Please enter a product name
-                              </div>
-                          </div>
-                          <textarea class="form-control bg-light border-0" id="productDetails-1" rows="2" placeholder="Product Details"></textarea>
-                      </td>
-                      <td>
-                          <input type="number" class="form-control product-price bg-light border-0" id="productRate-1" step="0.01" placeholder="0.00" required="">
-                          <div class="invalid-feedback">
-                              Please enter a rate
-                          </div>
-                      </td>
-                      <td>
-                          <div class="d-flex input-step">
-                          <button class="btn btn_step" onclick="totalClick(1)">+</button>
-                              <span id="totalClicks">2</span>  
-                          <button class="btn btn_step" onclick="totalClick(-1)">-</button>
-                          </div>
-                        
-                      </td>
-                      <td class="text-end">
-                          <div>
-                              <input type="text" class="form-control bg-light border-0 product-line-price" id="productPrice-1" placeholder="$0.00" readonly="">
-                          </div>
-                      </td>
-                      <td class="product-removal">
-                          <a href="javascript:void(0)" class="btn btn-success">Delete</a>
-                      </td>
-                  </tr>`;
-                  document.getElementById('newlink').innerHTML += tableRow;
-                  });
+          const button = document.getElementById("add-item");
+
+            button.addEventListener("click", (event) => {
+              let tableRow = `<tr id="1" class="product">
+              <th scope="row" class="product-id">1</th>
+              <td class="text-start">
+                  <div class="mb-2">
+                      <input type="text" class="form-control bg-light border-0" id="productName-1" placeholder="Product Name" required="">
+                      <div class="invalid-feedback">
+                          Please enter a product name
+                      </div>
+                  </div>
+                  <textarea class="form-control bg-light border-0" id="productDetails-1" rows="2" placeholder="Product Details"></textarea>
+              </td>
+              <td>
+                  <input type="number" class="form-control product-price bg-light border-0" id="productRate-1" step="0.01" placeholder="0.00" required="">
+                  <div class="invalid-feedback">
+                      Please enter a rate
+                  </div>
+              </td>
+              <td>
+                  <div class="d-flex input-step">
+                    <button class="btn btn_step dec_value">-</button>
+                      <span id="totalClickBtn">2</span>  
+                    <button class="btn btn_step inc_value">+</button>
+                  </div>
+                
+              </td>
+              <td class="text-end">
+                  <div>
+                      <input type="text" class="form-control bg-light border-0 product-line-price" id="productPrice-1" placeholder="$0.00" readonly="">
+                  </div>
+              </td>
+              <td class="product-removal">
+                  <a href="javascript:void(0)" class="btn btn-success">Delete</a>
+              </td>
+          </tr>`;
+          document.getElementById('newlink').innerHTML += tableRow;
+          });
                                     
     </script>
    

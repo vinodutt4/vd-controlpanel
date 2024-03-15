@@ -62,6 +62,12 @@
     border-top: 1px dashed #bfcbe7;
     margin-bottom: 15px;
 }
+.table_data_pro td {
+    font-size: 13px;
+}
+.datatable-table th {
+    font-size: 14px;
+}
 </style>
 </head>
   <body>
@@ -652,19 +658,19 @@
       <div class="row">
 
         <div class="datatable-container">
-          <table class="table datatable datatable-table">
+          <table class="table datatable datatable-table mb-0">
             <thead>
                 <thead>
                     <tr class="table-active">
                         <th scope="col" style="width: 50px;">#</th>
-                        <th scope="col">Product Details</th>
-                        <th scope="col">Rate</th>
-                        <th scope="col">Quantity</th>
-                        <th scope="col" class="text-end">Amount</th>
+                        <th scope="col" class="text-center">Product Details</th>
+                        <th scope="col" class="text-center">Rate</th>
+                        <th scope="col" class="text-center">Quantity</th>
+                        <th scope="col" class="text-center">Amount</th>
                     </tr>
                 </thead>
     </thead>
-    <tbody>
+    <tbody class="text-center table_data_pro">
         <tr>
             <td>01</td>
             <td>Sweatshirt for Men (Pink)
@@ -676,36 +682,45 @@
           </tr>
 
           <tr>
-            <td>Kalia Diaz</td>
+            <td>02</td>
+            <td>Sweatshirt for Men (Pink)
+                <p>Graphic Print Men & Women Sweatshirt</p>
+            </td>
             <td>9184</td>
             <td>Ichalkaranji</td>
             <td>2013/26/06</td>
-            <td>92%</td>
+       
           </tr>
 
           <tr>
-            <td>Kalia Diaz</td>
+            <td>03</td>
+            <td>Sweatshirt for Men (Pink)
+                <p>Graphic Print Men & Women Sweatshirt</p>
+            </td>
             <td>9184</td>
             <td>Ichalkaranji</td>
             <td>2013/26/06</td>
-            <td>92%</td>
+      
           </tr>
 
           <tr>
-            <td>Kalia Diaz</td>
+            <td>04</td>
+            <td>Sweatshirt for Men (Pink)
+                <p>Graphic Print Men & Women Sweatshirt</p>
+            </td>
             <td>9184</td>
             <td>Ichalkaranji</td>
             <td>2013/26/06</td>
-            <td>92%</td>
+        
           </tr>
     
 
   </tbody>
   
     </table>
-    <div class="mt-2">
+    <div>
         <table class="table table-borderless table-nowrap align-middle mb-0 ms-auto" style="width:250px">
-            <tbody>
+            <tbody class="table_data_pro">
                 <tr>
                     <td>Sub Total</td>
                     <td class="text-end">$699.96</td>
@@ -745,10 +760,10 @@
 
         <div class="mt-3">
             <h6 class="text-muted text-uppercase fw-semibold mb-3">Payment Details:</h6>
-            <p class="text-muted mb-1">Payment Method: <span class="fw-medium" id="payment-method">Mastercard</span></p>
-            <p class="text-muted mb-1">Card Holder: <span class="fw-medium" id="card-holder-name">David Nichols</span></p>
-            <p class="text-muted mb-1">Card Number: <span class="fw-medium" id="card-number">xxx xxxx xxxx 1234</span></p>
-            <p class="text-muted">Total Amount: <span class="fw-medium" id="">$ </span><span id="card-total-amount">755.96</span></p>
+            <p class="text-muted mb-1 fs-6">Payment Method: <span class="fw-medium" id="payment-method">Mastercard</span></p>
+            <p class="text-muted mb-1 fs-6">Card Holder: <span class="fw-medium" id="card-holder-name">David Nichols</span></p>
+            <p class="text-muted mb-1 fs-6">Card Number: <span class="fw-medium" id="card-number">xxx xxxx xxxx 1234</span></p>
+            <p class="text-muted fs-6">Total Amount: <span class="fw-medium" id="">$ </span><span id="card-total-amount">755.96</span></p>
         </div>
 
 

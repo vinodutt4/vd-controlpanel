@@ -382,8 +382,8 @@
             </a>
           </li>
           <li>
-            <a href="page-invoices.html">
-              <i class="bi bi-circle"></i><span>Invoice</span>
+            <a href="page-notifications.html">
+              <i class="bi bi-circle"></i><span>Notification</span>
             </a>
           </li>
        
@@ -402,7 +402,14 @@
                 <a href="page-invoices.html">
                   <i class="bi bi-circle"></i><span>create Invoice</span>
                 </a>
-              </li>              
+              </li>  
+              
+              <li>
+                <a href="invoice-detail.html">
+                  <i class="bi bi-circle"></i><span>Invoice-Detail</span>
+                </a>
+              </li>   
+
             </ul>
           </li><!-- End invoice Nav -->
     
@@ -594,7 +601,7 @@
       <script>
         const time = new Date().getHours();
         let greeting;
-        if (time < 10) {
+        if (time < 12) {
           greeting = "Good Morning";
         } else if (time < 17) {
           greeting = "Good day";
