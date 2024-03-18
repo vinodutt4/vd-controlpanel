@@ -88,6 +88,7 @@
                     <div class="col-12">
                       <label for="yourPassword" class="form-label">Password</label>
                       <input type="password" name="password" class="form-control" id="yourPassword" required>
+                      <i class="toggle-password fa fa-fw fa-eye-slash"></i>
                       <div class="invalid-feedback">Please enter your password!</div>
                     </div>
 
@@ -140,7 +141,19 @@
 
   <!-- Template Main JS File -->
   <script src="assets/js/main.js"></script>
-
+  <Script>
+ 
+    $(".toggle-password").click(function() {
+       $(this).toggleClass("fa-eye fa-eye-slash");
+       input = $(this).parent().find("input");
+       if (input.attr("type") == "password") {
+           input.attr("type", "text");
+       } else {
+           input.attr("type", "password");
+       }
+   });
+     </Script>
+   
 </body>
 
 </html>
