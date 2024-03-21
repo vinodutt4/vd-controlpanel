@@ -57,30 +57,26 @@
     padding-left: 10px;
     color: #555;
 }
-.wrapper .form-field input {
-    width: 100%;
-    display: block;
-    border: none;
-    outline: none;
-    background: none;
-    font-size: 1.2rem;
-    color: #666;
-    padding: 10px 15px 10px 10px;
-    /* border: 1px solid red; */
-}
 .wrapper .form-field .fas {
     color: #555;
+}
+.fa-eye:before {
+    position: relative;
+    top: 10px;
+    right: 25px;
+}
+.fa-eye-slash:before {
+  position: relative;
+    top: 10px;
+    right: 25px;
 }
 .wrapper .btn {
     width: 100%;
     background-color: #1a48ce;
 }
-.wrapper .form-field {
-    padding-left: 10px;
-    margin-bottom: 20px;
-    border-radius: 8px;
-    border: 1px solid #9999993d;
-    box-shadow: inset 8px 8px 8px #ffffff, inset -8px -8px 8px #fff;
+.fa-fw {
+    text-align: center;
+    width: 0.25em;
 }
 .wrapper a {
     text-decoration: none;
@@ -104,7 +100,6 @@
 
 <body>
 
-
  <main class="main_bg" style="background:#012970;">
     <div class="container">
 
@@ -127,13 +122,18 @@
                   </div>
                 </div>
                 <form class="p-3 mt-3">
-                    <div class="form-field d-flex align-items-center">
-                      <span class="far fa-user"></span>
-                        <input type="text" name="userName" id="userName" placeholder="Username">
+                  <label for="validationCustomUsername" class="form-label">Username</label>
+                  <div class="input-group has-validation">
+                    <span class="input-group-text" id="inputGroupPrepend">@</span>
+                    <input type="text" class="form-control" id="validationCustomUsername" aria-describedby="inputGroupPrepend" required>
+                    <div class="invalid-feedback">
+                      Please choose a username.
                     </div>
-                    <div class="form-field d-flex align-items-center">
-                        <span class="fas fa-key"></span>
-                        <input type="password" id="password" class="form-control" value="password">
+                  </div>
+                    <div class="mt-2 input-group has-validationr">
+                      <span class="input-group-text" id="inputGroupPrepend"><i class="bi bi-key"></i></span>
+                        <input type="password" class="form-control" id="validationpassword" aria-describedby="inputGroupPrepend" required  value="password">
+                        <!-- <input type="password" id="password" class="form-control"> -->
                           <i class="toggle-password fa fa-fw fa-eye-slash"></i>
                     </div>
                     <button class="btn mt-3 text-white shadow rounded-pill">Login</button>

@@ -47,26 +47,6 @@
     box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
     border-radius: 30px;
 }
-
-.user_icons:before {
-    position: relative;
-    top: 0;
-    left: 5px;
-}
-.fas{
-    position: absolute;
-}
-input {
-    margin-bottom: 30px;
-    padding: 0 30px 5px;
-    border: none;
-    border-bottom: 1px solid #444444a8;
-    border-radius: 6px;
-    background-color: #f6f9ff;
-}
-input:focus{
-    border-bottom: 1px solid #eeeeee;
-}
 .btn:hover{
     opacity:1;
 }
@@ -78,13 +58,17 @@ input:focus{
 }
 .fa-eye-slash:before {
     position: relative;
-    top: -5px;
-    right: 20px;
+    top: 10px;
+    right: 25px;
+}
+.fa-fw {
+    text-align: center;
+    width: 0.25em;
 }
 .fa-eye:before {
     position: relative;
-    top: -5px;
-    right: 20px;
+    top: 10px;
+    right: 25px;
 }
 .login-btn button{
   width: 260px;
@@ -115,12 +99,38 @@ a.btn-outline {
               </a>
             </div>
             <h1 class="mb-3 fs-4 fw-bold">Sign Up</h1>
-            <div class="user">
-              <div class="form-field align-items-center">
-              <i class="fas fa-user user_icons"></i>
-              <input type="text" name="username" id="username" placeholder="Full Name">
-            </div>
-            <div class="form-field align-items-center">
+         
+              <div class="mt-2 input-group has-validation">
+                <span class="input-group-text" id="inputGroupPrepend">@</span>
+                <input type="text" class="form-control" id="validationCustomUsername" placeholder="Enter Username" aria-describedby="inputGroupPrepend" required>
+                <div class="invalid-feedback">
+                  Please choose a username.
+                </div>
+              </div>
+
+              <div class="mt-2 input-group has-validation">
+                <span class="input-group-text" id="inputGroupPrepend"><i class="fas fa-envelope user_icons"></i></span>
+                <input type="text" class="form-control" placeholder="Email Address" id="validationCustomEmail"
+                 aria-describedby="inputGroupPrepend" required>
+                <div class="invalid-feedback">
+                  Please choose a Email.
+                </div>
+              </div>
+
+
+              <div class="mt-2 input-group has-validation">
+                <span class="input-group-text" id="inputGroupPrepend"><i class="fas fa-unlock-alt user_icons"></i></span>
+                <input type="text" class="form-control" id="validationCustomPassword" placeholder="Enter Password"
+                 value="password" aria-describedby="inputGroupPrepend" required>
+                 <i class="toggle-password fa fa-fw fa-eye-slash"></i>
+                  <div class="invalid-feedback">
+                  Please choose a password.
+                </div>
+              </div>
+               <div>
+                <button class="btn btn-outline-dark px-5 py-2 mt-3 shadow rounded-pill">Login</button>
+               </div>
+            <!-- <div class="form-field align-items-center">
               <i class="fas fa-envelope user_icons"></i>
               <input type="text" name="email" id="email" placeholder="Email Address">
               </div>
@@ -134,7 +144,7 @@ a.btn-outline {
             <div class="d-flex justify-content-left login-btn">
               <button class="btn btn-outline-dark"> <a class="btn-outline" href="succes.html"> Submit</a></button>
             
-            </div>
+            </div> -->
            
           
 
