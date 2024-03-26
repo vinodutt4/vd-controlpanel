@@ -713,30 +713,20 @@ button.btn.default_btn {
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                   </div>
                   <div class="modal-body">
-                    <div class="file-upload">
-                      <button class="file-upload-btn" type="button" onclick="$('.file-upload-input').trigger( 'click' )">Add Image</button>
-                    
-                      <div class="image-upload-wrap">
-                        <input class="file-upload-input" type='file' onchange="readURL(this);" accept="image/*" />
-                        <div class="drag-text">
-                          <h3 class="fs-6 fw-bold">Drag and drop a file or select add Image</h3>
-                        </div>
-                      </div>
-                      <div class="file-upload-content">
-                        <img class="file-upload-image" src="#" alt="your image" />
-                        <div class="image-title-wrap">
-                          <button type="button" onclick="removeUpload()" class="remove-image">Remove <span class="image-title">Uploaded Image</span></button>
-                        </div>
-                      </div>
-                    </div>
-                    tytuui
-                    <!-- <h5 class="mt-5 fs-6 fw-bold">Two Step Verification:</h5>
+                    <h5 class="fs-6 fw-bold">Role:</h5>
                     <select class="form-select border-0 bg-light" aria-label="Default select example">
                       <option selected>Select option</option>
                       <option value="1">One</option>
                       <option value="2">Two</option>
                       <option value="3">Three</option>
-                    </select> -->
+                    </select>
+                    <h5 class="mt-5 fs-6 fw-bold">Two Step Verification:</h5>
+                    <select class="form-select border-0 bg-light" aria-label="Default select example">
+                      <option selected>Select option</option>
+                      <option value="1">One</option>
+                      <option value="2">Two</option>
+                      <option value="3">Three</option>
+                    </select>
                   </div>
                   <div class="modal-footer">
                     <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
@@ -747,129 +737,290 @@ button.btn.default_btn {
             </div>
             </div>
       
-                </div>
-                <div class="main-box no-header clearfix">
-                    <div class="main-box-body clearfix">
-                        <div class="table-responsive">
-                            <table class="table user-list">
-                                <thead>
-                                    <tr>
-                                    <th><span>User</span></th>
-                                    <th><span>Created</span></th>
-                                    <th class="text-center"><span>Status</span></th>
-                                    <th><span>Email</span></th>
-                                    <th>&nbsp;</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <tr>
-                                        <td>
-                                            <img src="https://bootdey.com/img/Content/user_1.jpg" alt="">
-                                            <a href="#" class="user-link">Full name 1</a>
-                                            <span class="user-subhead">Member</span>
-                                        </td>
-                                        <td>2013/08/12</td>
-                                        <td class="text-center">
-                                            <span class="label label-default">pending</span>
-                                        </td>
-                                        <td>
-                                            <a href="#">marlon@brando.com</a>
-                                        </td>
-                                        <td style="width: 20%;">
-                                            <a href="#" class="table-link text-warning">
-                                                <span class="fa-stack">
-                                                    <i class="fa fa-square fa-stack-2x"></i>
-                                                    <i class="fa fa-search-plus fa-stack-1x fa-inverse"></i>
-                                                </span>
-                                            </a>
-                                            <a href="#" class="table-link text-info">
-                                                <span class="fa-stack">
-                                                    <i class="fa fa-square fa-stack-2x"></i>
-                                                    <i class="fa fa-pencil fa-stack-1x fa-inverse"></i>
-                                                </span>
-                                            </a>
-                                            <a href="#" class="table-link danger">
-                                                <span class="fa-stack">
-                                                    <i class="far fa-trash-alt"></i>
-                                                    <i class="fa fa-trash-o fa-stack-1x fa-inverse"></i>
-                                                </span>
-                                            </a>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>
-                                            <img src="https://bootdey.com/img/Content/user_3.jpg" alt="">
-                                            <a href="#" class="user-link">Full name 2</a>
-                                            <span class="user-subhead">Admin</span>
-                                        </td>
-                                        <td>2013/08/12</td>
-                                        <td class="text-center">
-                                            <span class="label label-success">Active</span>
-                                        </td>
-                                        <td>
-                                            <a href="#">marlon@brando.com</a>
-                                        </td>
-                                        <td style="width: 20%;">
-                                            <a href="#" class="table-link  text-warning">
-                                                <span class="fa-stack">
-                                                    <i class="fa fa-square fa-stack-2x"></i>
-                                                    <i class="fa fa-search-plus fa-stack-1x fa-inverse"></i>
-                                                </span>
-                                            </a>
-                                            <a href="#" class="table-link  text-info">
-                                                <span class="fa-stack">
-                                                    <i class="fa fa-square fa-stack-2x"></i>
-                                                    <i class="fa fa-pencil fa-stack-1x fa-inverse"></i>
-                                                </span>
-                                            </a>
-                                            <a href="#" class="table-link danger">
-                                                <span class="fa-stack">
-                                                    <i class="far fa-trash-alt"></i>
-                                                    <i class="fa fa-trash-o fa-stack-1x fa-inverse"></i>
-                                                </span>
-                                            </a>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>
-                                            <img src="https://bootdey.com/img/Content/user_2.jpg" alt="">
-                                            <a href="#" class="user-link">Full name 3</a>
-                                            <span class="user-subhead">Member</span>
-                                        </td>
-                                        <td>2013/08/12</td>
-                                        <td class="text-center">
-                                            <span class="label label-danger">inactive</span>
-                                        </td>
-                                        <td>
-                                            <a href="#">marlon@brando.com</a>
-                                        </td>
-                                        <td style="width: 20%;">
-                                            <a href="#" class="table-link  text-warning">
-                                                <span class="fa-stack">
-                                                    <i class="fa fa-square fa-stack-2x"></i>
-                                                    <i class="fa fa-search-plus fa-stack-1x fa-inverse"></i>
-                                                </span>
-                                            </a>
-                                            <a href="#" class="table-link  text-info">
-                                                <span class="fa-stack">
-                                                    <i class="fa fa-square fa-stack-2x"></i>
-                                                    <i class="fa fa-pencil fa-stack-1x fa-inverse"></i>
-                                                </span>
-                                            </a>
-                                            <a href="#" class="table-link danger">
-                                                <span class="fa-stack">
-                                                    <i class="far fa-trash-alt"></i>
-                                                    <i class="fa fa-trash-o fa-stack-1x fa-inverse"></i>
-                                                </span>
-                                            </a>
-                                        </td>
-                                    </tr>
-                                </tbody>
-                            </table>
-                        </div>
-                    </div>
+          </div>
+        <!-- ------------------ -->
+
+        <div class="main-box no-header clearfix">
+          <div class="main-box-body clearfix">
+            <div class="table-responsive">
+              <table class="table paginated user-list ">
+                  <thead>
+                    <tr>
+                    <th><span>User</span></th>
+                    <th><span>Created</span></th>
+                    <th class="text-center"><span>Status</span></th>
+                    <th><span>Email</span></th>
+                    <th>&nbsp;</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>
+                            <img src="https://bootdey.com/img/Content/user_1.jpg" alt="">
+                            <a href="#" class="user-link">Full name 1</a>
+                            <span class="user-subhead">Member</span>
+                        </td>
+                        <td>2013/08/12</td>
+                        <td class="text-center">
+                            <span class="label label-default">pending</span>
+                        </td>
+                        <td>
+                            <a href="#">marlon@brando.com</a>
+                        </td>
+                        <td style="width: 20%;">
+                            <a href="#" class="table-link text-warning">
+                              <span class="fa-stack">
+                                <i class="fa fa-square fa-stack-2x"></i>
+                                <i class="fa fa-search-plus fa-stack-1x fa-inverse"></i>
+                              </span>
+                            </a>
+                          <a href="#" class="table-link text-info">
+                            <span class="fa-stack">
+                              <i class="fa fa-square fa-stack-2x"></i>
+                              <i class="fa fa-pencil fa-stack-1x fa-inverse"></i>
+                            </span>
+                          </a>
+                            <a href="#" class="table-link danger">
+                                <span class="fa-stack">
+                                    <i class="far fa-trash-alt"></i>
+                                    <i class="fa fa-trash-o fa-stack-1x fa-inverse"></i>
+                                </span>
+                            </a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <img src="https://bootdey.com/img/Content/user_3.jpg" alt="">
+                            <a href="#" class="user-link">Full name 2</a>
+                            <span class="user-subhead">Admin</span>
+                        </td>
+                        <td>2013/08/12</td>
+                        <td class="text-center">
+                            <span class="label label-success">Active</span>
+                        </td>
+                        <td>
+                            <a href="#">marlon@brando.com</a>
+                        </td>
+                        <td style="width: 20%;">
+                            <a href="#" class="table-link  text-warning">
+                                <span class="fa-stack">
+                                    <i class="fa fa-square fa-stack-2x"></i>
+                                    <i class="fa fa-search-plus fa-stack-1x fa-inverse"></i>
+                                </span>
+                            </a>
+                            <a href="#" class="table-link  text-info">
+                                <span class="fa-stack">
+                                    <i class="fa fa-square fa-stack-2x"></i>
+                                    <i class="fa fa-pencil fa-stack-1x fa-inverse"></i>
+                                </span>
+                            </a>
+                            <a href="#" class="table-link danger">
+                                <span class="fa-stack">
+                                    <i class="far fa-trash-alt"></i>
+                                    <i class="fa fa-trash-o fa-stack-1x fa-inverse"></i>
+                                </span>
+                            </a>
+                        </td>
+                    </tr>
+                            <tr>
+                                <td>
+                                    <img src="https://bootdey.com/img/Content/user_2.jpg" alt="">
+                                    <a href="#" class="user-link">Full name 3</a>
+                                    <span class="user-subhead">Member</span>
+                                </td>
+                                <td>2013/08/12</td>
+                                <td class="text-center">
+                                    <span class="label label-danger">inactive</span>
+                                </td>
+                                <td>
+                                    <a href="#">marlon@brando.com</a>
+                                </td>
+                                <td style="width: 20%;">
+                                    <a href="#" class="table-link  text-warning">
+                                        <span class="fa-stack">
+                                            <i class="fa fa-square fa-stack-2x"></i>
+                                            <i class="fa fa-search-plus fa-stack-1x fa-inverse"></i>
+                                        </span>
+                                    </a>
+                                    <a href="#" class="table-link  text-info">
+                                        <span class="fa-stack">
+                                            <i class="fa fa-square fa-stack-2x"></i>
+                                            <i class="fa fa-pencil fa-stack-1x fa-inverse"></i>
+                                        </span>
+                                    </a>
+                                    <a href="#" class="table-link danger">
+                                        <span class="fa-stack">
+                                            <i class="far fa-trash-alt"></i>
+                                            <i class="fa fa-trash-o fa-stack-1x fa-inverse"></i>
+                                        </span>
+                                    </a>
+                                </td>
+                            </tr>
+
+                            <tr>
+                              <td>
+                                  <img src="https://bootdey.com/img/Content/user_2.jpg" alt="">
+                                  <a href="#" class="user-link">Full name 3</a>
+                                  <span class="user-subhead">Member</span>
+                              </td>
+                              <td>2013/08/12</td>
+                              <td class="text-center">
+                                  <span class="label label-danger">inactive</span>
+                              </td>
+                              <td>
+                                  <a href="#">marlon@brando.com</a>
+                              </td>
+                              <td style="width: 20%;">
+                                  <a href="#" class="table-link  text-warning">
+                                      <span class="fa-stack">
+                                          <i class="fa fa-square fa-stack-2x"></i>
+                                          <i class="fa fa-search-plus fa-stack-1x fa-inverse"></i>
+                                      </span>
+                                  </a>
+                                  <a href="#" class="table-link  text-info">
+                                      <span class="fa-stack">
+                                          <i class="fa fa-square fa-stack-2x"></i>
+                                          <i class="fa fa-pencil fa-stack-1x fa-inverse"></i>
+                                      </span>
+                                  </a>
+                                  <a href="#" class="table-link danger">
+                                      <span class="fa-stack">
+                                          <i class="far fa-trash-alt"></i>
+                                          <i class="fa fa-trash-o fa-stack-1x fa-inverse"></i>
+                                      </span>
+                                  </a>
+                              </td>
+                          </tr>
+
+                          <tr>
+                            <td>
+                                <img src="https://bootdey.com/img/Content/user_2.jpg" alt="">
+                                <a href="#" class="user-link">Full name 3</a>
+                                <span class="user-subhead">Member</span>
+                            </td>
+                            <td>2013/08/12</td>
+                            <td class="text-center">
+                                <span class="label label-danger">inactive</span>
+                            </td>
+                            <td>
+                                <a href="#">marlon@brando.com</a>
+                            </td>
+                            <td style="width: 20%;">
+                                <a href="#" class="table-link  text-warning">
+                                    <span class="fa-stack">
+                                        <i class="fa fa-square fa-stack-2x"></i>
+                                        <i class="fa fa-search-plus fa-stack-1x fa-inverse"></i>
+                                    </span>
+                                </a>
+                                <a href="#" class="table-link  text-info">
+                                    <span class="fa-stack">
+                                        <i class="fa fa-square fa-stack-2x"></i>
+                                        <i class="fa fa-pencil fa-stack-1x fa-inverse"></i>
+                                    </span>
+                                </a>
+                                <a href="#" class="table-link danger">
+                                    <span class="fa-stack">
+                                        <i class="far fa-trash-alt"></i>
+                                        <i class="fa fa-trash-o fa-stack-1x fa-inverse"></i>
+                                    </span>
+                                </a>
+                            </td>
+                        </tr>
+
+                        <tr>
+                          <td>
+                              <img src="https://bootdey.com/img/Content/user_2.jpg" alt="">
+                              <a href="#" class="user-link">Full name 3</a>
+                              <span class="user-subhead">Member</span>
+                          </td>
+                          <td>2013/08/12</td>
+                          <td class="text-center">
+                              <span class="label label-danger">inactive</span>
+                          </td>
+                          <td>
+                              <a href="#">marlon@brando.com</a>
+                          </td>
+                          <td style="width: 20%;">
+                              <a href="#" class="table-link  text-warning">
+                                  <span class="fa-stack">
+                                      <i class="fa fa-square fa-stack-2x"></i>
+                                      <i class="fa fa-search-plus fa-stack-1x fa-inverse"></i>
+                                  </span>
+                              </a>
+                              <a href="#" class="table-link  text-info">
+                                  <span class="fa-stack">
+                                      <i class="fa fa-square fa-stack-2x"></i>
+                                      <i class="fa fa-pencil fa-stack-1x fa-inverse"></i>
+                                  </span>
+                              </a>
+                              <a href="#" class="table-link danger">
+                                  <span class="fa-stack">
+                                      <i class="far fa-trash-alt"></i>
+                                      <i class="fa fa-trash-o fa-stack-1x fa-inverse"></i>
+                                  </span>
+                              </a>
+                          </td>
+                      </tr>
+
+                      <tr>
+                        <td>
+                            <img src="https://bootdey.com/img/Content/user_2.jpg" alt="">
+                            <a href="#" class="user-link">Full name 3</a>
+                            <span class="user-subhead">Member</span>
+                        </td>
+                        <td>2013/08/12</td>
+                        <td class="text-center">
+                            <span class="label label-danger">inactive</span>
+                        </td>
+                        <td>
+                            <a href="#">marlon@brando.com</a>
+                        </td>
+                        <td style="width: 20%;">
+                            <a href="#" class="table-link  text-warning">
+                                <span class="fa-stack">
+                                    <i class="fa fa-square fa-stack-2x"></i>
+                                    <i class="fa fa-search-plus fa-stack-1x fa-inverse"></i>
+                                </span>
+                            </a>
+                            <a href="#" class="table-link  text-info">
+                                <span class="fa-stack">
+                                    <i class="fa fa-square fa-stack-2x"></i>
+                                    <i class="fa fa-pencil fa-stack-1x fa-inverse"></i>
+                                </span>
+                            </a>
+                            <a href="#" class="table-link danger">
+                                <span class="fa-stack">
+                                    <i class="far fa-trash-alt"></i>
+                                    <i class="fa fa-trash-o fa-stack-1x fa-inverse"></i>
+                                </span>
+                            </a>
+                        </td>
+                    </tr>
+                        </tbody>
+                        
+                    </table>
                 </div>
             </div>
+        </div>
+        <nav aria-label="Page navigation example">
+          <ul class="pagination d-flex justify-content-end">
+            <li class="page-item">
+              <a class="page-link" href="#" aria-label="Previous">
+                <span aria-hidden="true">«</span>
+              </a>
+            </li>
+            <li class="page-item"><a class="page-link" href="#">1</a></li>
+            <li class="page-item"><a class="page-link" href="#">2</a></li>
+            <li class="page-item"><a class="page-link" href="#">3</a></li>
+            <li class="page-item">
+              <a class="page-link" href="#" aria-label="Next">
+                <span aria-hidden="true">»</span>
+              </a>
+            </li>
+          </ul>
+        </nav>
+    </div>
+  
     </div>
 </div>
 </section>
@@ -897,46 +1048,9 @@ button.btn.default_btn {
     <script src="assets/js/main.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/fullcalendar@6.1.11/index.global.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@fullcalendar/bootstrap5@6.1.11/index.global.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/simplePagination.js/1.6/jquery.simplePagination.js"></script>
 
-    <script class="jsbin" src="https://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
-    <script>
-      function readURL(input) {
-   if (input.files && input.files[0]) {
  
-     var reader = new FileReader();
- 
-     reader.onload = function(e) {
-       $('.image-upload-wrap').hide();
- 
-       $('.file-upload-image').attr('src', e.target.result);
-       $('.file-upload-content').show();
- 
-       $('.image-title').html(input.files[0].name);
-     };
- 
-     reader.readAsDataURL(input.files[0]);
- 
-   } else {
-     removeUpload();
-   }
- }
- 
- function removeUpload() {
-   $('.file-upload-input').replaceWith($('.file-upload-input').clone());
-   $('.file-upload-content').hide();
-   $('.image-upload-wrap').show();
- }
- $('.image-upload-wrap').bind('dragover', function () {
-     $('.image-upload-wrap').addClass('image-dropping');
-   });
-   $('.image-upload-wrap').bind('dragleave', function () {
-     $('.image-upload-wrap').removeClass('image-dropping');
- });
- 
-
-
-
-
 
     
   </body>

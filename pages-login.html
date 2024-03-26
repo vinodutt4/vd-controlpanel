@@ -134,7 +134,7 @@
                       <span class="input-group-text" id="inputGroupPrepend"><i class="bi bi-key"></i></span>
                         <input type="password" class="form-control" id="validationpassword" aria-describedby="inputGroupPrepend" required  value="password">
                         <!-- <input type="password" id="password" class="form-control"> -->
-                          <i class="toggle-password fa fa-fw fa-eye-slash"></i>
+                          <i class="toggle-password fa fa-eye-slash fa-fw"></i>
                     </div>
                     <button class="btn mt-3 text-white shadow rounded-pill">Login</button>
                 </form>
@@ -176,15 +176,18 @@
   <script src="assets/js/main.js"></script>
 
   <Script>
- 
+ $(document).ready(function(){
+
  $(".toggle-password").click(function() {
-    $(this).toggleClass("fa-eye fa-eye-slash");
+    $(this).toggleClass("fa-eye-slash fa-eye");
     input = $(this).parent().find("input");
+
     if (input.attr("type") == "password") {
         input.attr("type", "text");
     } else {
         input.attr("type", "password");
     }
+});
 });
   </Script>
 
